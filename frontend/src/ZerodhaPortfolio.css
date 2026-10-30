@@ -1,0 +1,238 @@
+
+/* Zerodha Portfolio */
+.zerodha-portfolio {
+  width: 100%;
+  color: #202938;
+}
+
+.zerodha-portfolio * {
+  box-sizing: border-box;
+}
+
+.zerodha-portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.zerodha-portfolio-header h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.zerodha-portfolio-header p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.zerodha-portfolio button,
+.zerodha-portfolio input,
+.zerodha-portfolio select {
+  font: inherit;
+}
+
+.zerodha-portfolio button {
+  cursor: pointer;
+}
+
+.zerodha-portfolio .portfolio-refresh {
+  border: 0;
+  border-radius: 8px;
+  background: #202938;
+  color: #fff;
+  padding: 11px 17px;
+  font-weight: 600;
+}
+
+.zerodha-portfolio .portfolio-refresh:hover {
+  background: #374151;
+}
+
+.zerodha-portfolio .portfolio-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.zerodha-portfolio .portfolio-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.zerodha-portfolio .portfolio-metric {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(20 30 50 / 4%);
+}
+
+.zerodha-portfolio .portfolio-metric span {
+  display: block;
+  margin-bottom: 13px;
+  color: #718096;
+  font-size: 13px;
+}
+
+.zerodha-portfolio .portfolio-metric strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.zerodha-portfolio .portfolio-positive {
+  color: #16835f;
+}
+
+.zerodha-portfolio .portfolio-negative {
+  color: #d14343;
+}
+
+.zerodha-portfolio .portfolio-panel {
+  margin-bottom: 22px;
+  overflow: hidden;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(20 30 50 / 3%);
+}
+
+.zerodha-portfolio .portfolio-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.zerodha-portfolio .portfolio-panel-header h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.zerodha-portfolio .portfolio-panel-header p {
+  margin: 6px 0 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+.zerodha-portfolio .portfolio-search {
+  width: min(100%, 300px);
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #202938;
+}
+
+.zerodha-portfolio .portfolio-search:focus {
+  border-color: #64748b;
+  box-shadow: 0 0 0 3px rgb(100 116 139 / 12%);
+}
+
+.zerodha-portfolio .portfolio-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.zerodha-portfolio table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.zerodha-portfolio th {
+  padding: 13px 18px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+}
+
+.zerodha-portfolio td {
+  padding: 16px 18px;
+  border-top: 1px solid #edf0f4;
+  font-size: 13px;
+}
+
+.zerodha-portfolio tbody tr:hover {
+  background: #fafbfc;
+}
+
+.zerodha-portfolio .portfolio-symbol {
+  font-weight: 700;
+}
+
+.zerodha-portfolio .portfolio-subtext {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.zerodha-portfolio .portfolio-empty {
+  padding: 35px 18px;
+  color: #718096;
+  text-align: center;
+}
+
+.zerodha-portfolio .portfolio-notice {
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border: 1px solid #e4e9f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+}
+
+.zerodha-portfolio .portfolio-disclaimer {
+  margin-top: 16px;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .zerodha-portfolio .portfolio-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .zerodha-portfolio .portfolio-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .zerodha-portfolio .portfolio-metric {
+    padding: 17px;
+  }
+
+  .zerodha-portfolio .portfolio-metric strong {
+    font-size: 21px;
+  }
+
+  .zerodha-portfolio .portfolio-panel-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .zerodha-portfolio .portfolio-search {
+    width: 100%;
+  }
+}
